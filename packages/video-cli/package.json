@@ -1,7 +1,7 @@
 {
   "name": "@hypit/video-cli",
   "version": "0.0.0-dev",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "Apache-2.0",
   "private": true,
   "type": "module",
   "exports": {
