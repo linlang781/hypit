@@ -23,7 +23,7 @@
   <a href="./package.json"><img alt="Node 22.15+" src="https://img.shields.io/badge/Node.js-22.15%2B-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white"></a>
   <a href="./package.json"><img alt="pnpm 10.33" src="https://img.shields.io/badge/pnpm-10.33-F69220?style=flat-square&logo=pnpm&logoColor=white"></a>
   <a href="./package.json"><img alt="TypeScript 5.9" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white"></a>
-  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0%20with%20conditions-E3B341?style=flat-square"></a>
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square"></a>
 </p>
 
 <p align="center">
@@ -196,4 +196,4 @@ Agent 会检查环境，索要这条视频需要的凭据，生成素材并构�
 
 ## 许可证
 
-Hypit 采用 [Hypit 开源许可证](./LICENSE)。你创作的视频和其他产出归你所有；第三方模型与服务可能另有条款。
+Hypit 采用 [Apache License 2.0](./LICENSE)。你创作的视频和其他产出归你所有；第三方模型与服务可能另有条款。
