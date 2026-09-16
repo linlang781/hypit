@@ -5,7 +5,7 @@ import { spawn } from "node:child_process";
 import type { CredentialAcquisition } from "@hypit/runtime";
 import { encodeOAuth2Credential } from "@hypit/runtime";
 
-const CALLBACK_MARK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M7.6 3.8H14.6L12.6 7.2H5.6L7.6 3.8Z" fill="currentColor"/><path d="M4.1 10.4H16.6L18.7 7H30.4L27.9 11.1H16.1L14.1 14.2H1.8L4.1 10.4Z" fill="currentColor"/><path d="M19.1 14.1H23.1L19.3 20.7H15.4L19.1 14.1Z" fill="currentColor"/></svg>`;
+const CALLBACK_MARK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 7h16v4H12v14H8z" fill="currentColor"/></svg>`;
 
 type OAuthAcquisitionOptions = {
   readonly onProgress?: (message: string) => void;
@@ -159,10 +159,10 @@ export async function acquireOAuthCredential(
 }
 
 function callbackPage(success: boolean): string {
-  const title = success ? "Authorization received" : "Hypit sign-in failed";
-  const heading = success ? "Authorization received" : "Hypit sign-in failed";
+  const title = success ? "Authorization received" : "识矩 sign-in failed";
+  const heading = success ? "Authorization received" : "识矩 sign-in failed";
   const message = success
-    ? "Return to the terminal while Hypit finishes the token exchange and stores the credential."
+    ? "Return to the terminal while 识矩 finishes the token exchange and stores the credential."
     : "The sign-in could not be completed. You can close this window and try again.";
   const tone = success ? "success" : "error";
   const favicon = `data:image/svg+xml,${encodeURIComponent(CALLBACK_MARK_SVG)}`;
@@ -177,7 +177,7 @@ function callbackPage(success: boolean): string {
     <style>
       :root {
         color-scheme: light dark;
-        --accent: #de3b67;
+        --accent: #d4942c;
         --ink: #1b1a18;
         --muted: #6b6963;
         --line: #e5e2dd;
@@ -202,7 +202,7 @@ function callbackPage(success: boolean): string {
       h1 { margin: 0; font-size: clamp(38px, 5vw, 62px); font-weight: 600; line-height: 1.18; letter-spacing: -2px; }
       p { max-width: 540px; margin: 20px auto 0; color: var(--muted); font-size: clamp(17px, 1.6vw, 22px); line-height: 1.5; }
       @media (prefers-color-scheme: dark) {
-        :root { --paper: #14110f; --ink: #e9e5db; --muted: #e9e5dba8; --line: #e9e5db1c; --accent: #de3c66; --bad: #ef8378; }
+        :root { --paper: #14110f; --ink: #e9e5db; --muted: #e9e5dba8; --line: #e9e5db1c; --accent: #e4b056; --bad: #ef8378; }
       }
       @media (max-width: 767px) { :root { --gutter: 20px; } main { padding-top: 64px; padding-bottom: 80px; } }
       @media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
@@ -210,7 +210,7 @@ function callbackPage(success: boolean): string {
   </head>
   <body>
     <header class="site-header">
-      <div class="shell"><div class="brand">${CALLBACK_MARK_SVG}<span>hypit</span></div></div>
+      <div class="shell"><div class="brand">${CALLBACK_MARK_SVG}<span>识矩</span></div></div>
     </header>
     <main>
       <section class="hero" aria-labelledby="callback-heading">
