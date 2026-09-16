@@ -5,8 +5,8 @@ import type { CliIo } from "@hypit/cli";
 const here = dirname(fileURLToPath(import.meta.url));
 
 export function writeStudioHelp(io: Pick<CliIo, "write">): void {
-  io.write(`hypit studio
-Open a Run in the browser to inspect its composition, Sources and Results.
+  io.write(`识矩 studio
+Open a Run in the browser to review the cut, its Sources and Results.
 
   hypit studio --run <build.svrun> [--runtime <hypit.runtime.json>]
     [--port <number>] [--workspace <directory>] [--package-root <directory>]

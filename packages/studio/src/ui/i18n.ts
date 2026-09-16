@@ -18,6 +18,7 @@ export async function initializeI18n(): Promise<void> {
   try { saved = localStorage.getItem(storageKey); } catch { /* Browser storage may be disabled. */ }
   language = chooseLanguage(languages, [...(saved ? [saved] : []), ...navigator.languages]);
   document.documentElement.lang = language.locale;
+  document.title = t("app.studio-title");
 }
 
 export function t(message: Message, values: MessageValues = {}): string {
@@ -59,6 +60,7 @@ function selectLanguage(pack: LanguagePack): void {
   language = pack;
   try { localStorage.setItem(storageKey, pack.locale); } catch { /* Tab-local choice still applies. */ }
   document.documentElement.lang = pack.locale;
+  document.title = t("app.studio-title");
   // Update explicitly marked chrome in place, without rebuilding editors or the player.
   for (const node of Array.from(document.querySelectorAll("[data-ui-text]"))) {
     uiText(node, node.getAttribute("data-ui-text") as Message, JSON.parse(node.getAttribute("data-ui-values") ?? "{}") as MessageValues);

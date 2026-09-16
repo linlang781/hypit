@@ -101,7 +101,7 @@ export function createComments(store: Store, stage: Stage) {
     if (comments.length === 0) {
       const empty = document.createElement("div");
       empty.className = "comments-empty";
-      empty.innerHTML = `${icon(filter === "done" ? "check" : "comments")}<strong></strong><p></p>`;
+      empty.innerHTML = `<span class="comments-empty-icon">${icon(filter === "done" ? "check" : "comments")}</span><strong></strong><p></p>`;
       uiText(empty.querySelector("strong")!, view === undefined ? "comments.loading-comments" : filter === "done" ? "comments.no-completed-comments" : filter === "open" ? "comments.caught-up" : "comments.empty");
       uiText(empty.querySelector("p")!, filter === "all" ? "comments.empty-hint" : "comments.filter-hint");
       list.append(empty);

@@ -359,7 +359,7 @@ test("plan scope omits unused branches while retaining every demanded request an
 test("help is concise and describes stable rather than complete output", () => {
   let output = "";
   writeCliHelp({ write(text) { output += text; } });
-  assert.match(output, /^Hypit\n/u);
+  assert.match(output, /^识矩\n/u);
   assert.match(output, /Results/u);
   assert.match(output, /stable machine view/u);
   assert.doesNotMatch(output, /Typical flow|complete machine-readable|image --prompt/u);

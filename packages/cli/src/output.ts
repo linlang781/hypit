@@ -299,7 +299,7 @@ function heading(status: "success" | "warning" | "error" | "info", text: string,
 }
 
 function renderDoctor(view: Extract<CliPresentation, { kind: "doctor" }>, io: CliIo, colors: Palette): string {
-  const lines = [colors.accent(colors.strong("Hypit Doctor")), ""];
+  const lines = [colors.accent(colors.strong("识矩 Doctor")), ""];
   lines.push(...facts([
     ["Project", shortPath(view.machine.project)],
     ["Runtime Profile", view.machine.profile === undefined ? "not selected" : shortPath(view.machine.profile)],
@@ -990,7 +990,7 @@ export function writeCliHelp(io: CliIo, topic?: string): void {
     throw new CliUsageError(`Unknown help topic ${JSON.stringify(topic)}`, "hypit help");
   }
   io.write([
-    colors.accent(colors.strong("Hypit")),
+    colors.accent(colors.strong("识矩")),
     "",
     colors.strong("Authoring"),
     row("check <source>", "verify one self-described Author or Run source"),
